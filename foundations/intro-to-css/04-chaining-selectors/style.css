@@ -1,1 +1,21 @@
-/* Add CSS Styling */
+/* btn__yellowAdd CSS Styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.avatar.proportioned {
+  width: 200px;
+  height: auto;
+}
+
+.avatar.distorted {
+  width: 200px;
+  height: 400px;
+}

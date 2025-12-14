@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: red;
+  font-weight: 900;
+  text-align: center;
+}

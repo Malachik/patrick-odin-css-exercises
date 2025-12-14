@@ -1,1 +1,44 @@
 /* Add CSS Styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+}
+
+.number__1,
+.number__3,
+.number__5 {
+  background-color: blue;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#number__2 {
+  font-size: 2rem;
+  color: red;
+  margin: 1rem 0;
+}
+
+.big__font {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.number__4-font {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+#number__4 {
+  background-color: hsl(90, 100%, 50%);
+}
