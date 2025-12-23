@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
   text-align: center;
 }
@@ -25,7 +31,7 @@
 }
 
 .sidebar {
-  background-color: #C50208;
+  background-color: #c50208;
 }
 
 .sidebar .photo {
@@ -36,7 +42,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -45,7 +50,7 @@
 }
 
 .nav {
-  background-color: #C50208;
+  background-color: #c50208;
 }
 
 .nav ul li {
@@ -65,9 +70,10 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #0db090;
   color: black;
   text-align: center;
+  padding: 4rem;
 }
 
 .card p {
@@ -88,4 +94,101 @@
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+/* MY SOLUTION */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+
+  grid-template-areas:
+    "header header"
+    "sidebar nav"
+    "sidebar Articles"
+    "footer footer";
+}
+
+/* GRID STYLE SECTION  */
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.nav {
+  grid-area: nav;
+}
+.container {
+  display: grid;
+  height: 100vh;
+}
+/* HEADER STYLE SECTION */
+
+.header {
+  display: grid;
+  grid-column: 1/3;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.link__menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.logo {
+  text-align: start;
+}
+
+/* NAV SECTION */
+.nav__list {
+  display: grid;
+  grid-column: 1/3;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+/* SIDE BAR SECTION */
+
+.sidebar {
+  display: grid;
+  gap: 3.125rem;
+  /* align-items: center; */
+}
+.side-content {
+  display: grid;
+  align-items: center;
+}
+
+.photo {
+  display: grid;
+  align-items: center;
+}
+
+/* ARTICLE SECTION */
+.article {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+  min-height: 200px;
+  border-radius: 6px;
+
+  background-color: #c50208;
 }
